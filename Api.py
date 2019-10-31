@@ -5,9 +5,9 @@ import datetime
 Star Api Request for Real Time hours
 """
 def requete(ligne = "C4", destination = "Grand+Quartier", idArret = "1292"):
-    r = requests.get("https://data.explore.star.fr/api/records/1.0/search/?dataset=tco-bus-circulation-passages-tr&sort=-arrivee&facet=idligne&facet=nomcourtligne&facet=sens&facet=destination&facet=precision&" +
+    r = requests.get("https://data.explore.star.fr/api/records/1.0/search/?dataset=tco-bus-circulation-passages-tr&sort=-arrivee&facet=idligne&facet=nomcourtligne&facet=sens&facet=destination&" +
     "refine.nomcourtligne=" + ligne + "&refine.destination=" + destination + "&" +
-    "refine.precision=Temps+r%C3%A9el&refine.idarret=" + idArret)
+    "&refine.idarret=" + idArret)
     return r
 
 """
